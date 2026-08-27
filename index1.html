@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>I'm Sorry ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe6ef, #fff5f8);
+    color: #333;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 25px;
+    animation: float 6s linear infinite;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Main card */
+.card {
+    background: rgba(255,255,255,0.9);
+    border-radius: 30px;
+    padding: 50px 25px;
+    margin-top: 30px;
+    box-shadow: 0 15px 40px rgba(255, 80, 130, 0.15);
+}
+
+h1 {
+    font-size: 55px;
+    color: #f04478;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #ed4778;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+button {
+    border: none;
+    background: linear-gradient(135deg, #ff4f87, #ed326b);
+    color: white;
+    padding: 15px 28px;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 0 8px 20px rgba(237,50,107,0.25);
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+/* Sections */
+.section {
+    background: white;
+    border-radius: 25px;
+    padding: 30px;
+    margin-top: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+}
+
+.hidden {
+    display: none;
+}
+
+.emoji {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.love-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.love-card {
+    width: 250px;
+    padding: 25px;
+    border-radius: 20px;
+    background: #fff5f8;
+}
+
+.love-card .big {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* Letter */
+.letter {
+    background: #fffafc;
+    border: 2px dashed #ff9db9;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.letter p {
+    font-size: 17px;
+}
+
+/* Surprise */
+.surprise-box {
+    padding: 35px 20px;
+    background: linear-gradient(135deg, #fff0f5, #ffe0eb);
+    border-radius: 25px;
+}
+
+.big-heart {
+    font-size: 90px;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Forgive */
+.forgive {
+    margin-top: 30px;
+    padding: 35px;
+    background: #fff0f5;
+    border-radius: 25px;
+}
+
+#response {
+    font-size: 22px;
+    color: #ed326b;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+footer {
+    margin: 30px;
+    color: #888;
+}
+
+@media(max-width:600px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .card {
+        padding: 35px 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating hearts -->
+<div class="heart" style="left:10%; animation-delay:0s;">❤️</div>
+<div class="heart" style="left:25%; animation-delay:2s;">💗</div>
+<div class="heart" style="left:45%; animation-delay:4s;">💕</div>
+<div class="heart" style="left:65%; animation-delay:1s;">💖</div>
+<div class="heart" style="left:85%; animation-delay:3s;">❤️</div>
+
+<div class="container">
+
+    <!-- Welcome -->
+    <div class="card">
+
+        <div class="emoji">🥺</div>
+
+        <h1>I'm Really Sorry</h1>
+
+        <p class="subtitle">
+            To the most important person in my life ❤️
+        </p>
+
+        <p>
+            I know you're angry with me...
+            and honestly, I don't like seeing you upset.
+        </p>
+
+        <button onclick="openApology()">
+            💌 Open My Apology
+        </button>
+
+    </div>
+
+
+    <!-- Apology -->
+    <div id="apology" class="section hidden">
+
+        <h2>I Want To Say Something... 💗</h2>
+
+        <div class="letter">
+
+            <p>
+                My Love,
+                <br><br>
+
+                I'm really sorry. 🥺❤️
+                I know I made you angry and I understand
+                that saying "sorry" doesn't magically fix everything.
+                <br><br>
+
+                But I genuinely regret hurting you.
+                You mean so much to me, and the last thing I ever
+                want is to make you feel bad because of me.
+                <br><br>
+
+                I may not always be perfect,
+                but my love for you is real.
+                I promise I'll try to understand you better,
+                listen to you more, and be better for us.
+                <br><br>
+
+                Please don't stay angry with me forever. 🥺
+                <br><br>
+
+                I love you. ❤️
+                <br><br>
+
+                — Your idiot who loves you way too much 😭❤️
+            </p>
+
+        </div>
+
+        <button onclick="showMemories()">
+            🥹 There's More...
+        </button>
+
+    </div>
+
+
+    <!-- Love cards -->
+    <div id="memories" class="section hidden">
+
+        <h2>Why You Are So Special ❤️</h2>
+
+        <div class="love-cards">
+
+            <div class="love-card">
+                <div class="big">❤️</div>
+                <h3>You Mean Everything</h3>
+                <p>
+                    You're one of the most precious
+                    people in my life.
+                </p>
+            </div>
+
+            <div class="love-card">
+                <div class="big">🥺</div>
+                <h3>I Was Wrong</h3>
+                <p>
+                    I admit my mistake.
+                    I'm truly sorry for hurting you.
+                </p>
+            </div>
+
+            <div class="love-card">
+                <div class="big">🌹</div>
+                <h3>Let's Start Again</h3>
+                <p>
+                    Let's leave this bad moment behind
+                    and make happier memories.
+                </p>
+            </div>
+
+        </div>
+
+        <button onclick="showSurprise()">
+            🎁 One Last Surprise
+        </button>
+
+    </div>
+
+
+    <!-- Surprise -->
+    <div id="surprise" class="section hidden">
+
+        <div class="surprise-box">
+
+            <div class="big-heart">❤️</div>
+
+            <h2>My Biggest Surprise...</h2>
+
+            <p>
+                No matter how angry you are,
+                you're still my favorite person. 🥺
+            </p>
+
+            <br>
+
+            <h2>I LOVE YOU ❤️</h2>
+
+            <p>
+                More than yesterday,
+                less than tomorrow. 💕
+            </p>
+
+        </div>
+
+
+        <!-- Forgive -->
+        <div class="forgive">
+
+            <h2>Can You Forgive Me? 🥺</h2>
+
+            <p>
+                Please click the button...
+            </p>
+
+            <button onclick="forgive()">
+                ❤️ Yes, I Forgive You
+            </button>
+
+            <button onclick="angry()">
+                😤 Still Angry
+            </button>
+
+            <div id="response"></div>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+        Made with ❤️ just for you
+    </footer>
+
+</div>
+
+
+<script>
+
+function openApology() {
+
+    document.getElementById("apology").classList.remove("hidden");
+
+    document.getElementById("apology").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+
+function showMemories() {
+
+    document.getElementById("memories").classList.remove("hidden");
+
+    document.getElementById("memories").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+
+function showSurprise() {
+
+    document.getElementById("surprise").classList.remove("hidden");
+
+    document.getElementById("surprise").scrollIntoView({
+        behavior: "smooth"
+    });
+
+    createHearts();
+}
+
+
+function forgive() {
+
+    document.getElementById("response").innerHTML =
+        "YAAAAAY 😭❤️ I LOVE YOU SO MUCH! 💕";
+
+    createHearts();
+
+}
+
+
+function angry() {
+
+    document.getElementById("response").innerHTML =
+        "Okay okay 😭🥺 I'll keep saying sorry... ❤️";
+
+}
+
+
+function createHearts() {
+
+    for(let i = 0; i < 25; i++) {
+
+        let heart = document.createElement("div");
+
+        heart.innerHTML = ["❤️","💗","💕","💖","💘"][Math.floor(Math.random()*5)];
+
+        heart.style.position = "fixed";
+        heart.style.left = Math.random() * 100 + "%";
+        heart.style.bottom = "-30px";
+        heart.style.fontSize = (20 + Math.random()*25) + "px";
+        heart.style.zIndex = "999";
+
+        document.body.appendChild(heart);
+
+        let animation = heart.animate(
+            [
+                {
+                    transform: "translateY(0) rotate(0deg)",
+                    opacity: 1
+                },
+                {
+                    transform:
+                    "translateY(-100vh) rotate(360deg)",
+                    opacity: 0
+                }
+            ],
+            {
+                duration: 3000 + Math.random()*3000,
+                easing: "linear"
+            }
+        );
+
+        animation.onfinish = () => heart.remove();
+    }
+}
+
+</script>
+
+</body>
+</html>
